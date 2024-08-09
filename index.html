@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/88871d979c.js"
       crossorigin="anonymous"
@@ -16,12 +22,13 @@
     /> -->
     <style>
       body {
-        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
         position: relative;
       }
+      body {
+        font-family: "Raleway", sans-serif;
+      }
       .hidden {
-        display: none;
+        display: none !important;
       }
       .drop:hover .drop-cont {
         display: block !important;
@@ -36,10 +43,13 @@
       .ro .col:hover {
         background-color: rgb(141, 138, 138);
       }
-      h3 {
-        font-size: 30px;
+      h5 {
+        font-weight: 300;
         font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
           "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .w {
+        height: 50px;
       }
       a {
         text-decoration: none;
@@ -49,8 +59,27 @@
         text-decoration: underline;
       }
       .ro .col {
-        padding: 20px;
+        /* padding: 30px; */
         box-sizing: border-box;
+      }
+      .coll {
+        height: 45px;
+      }
+      .drop {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+      h5 {
+        font-size: 18px;
+      }
+      .drop:hover {
+        background-color: rgb(37, 37, 37);
+      }
+      @media screen and (max-width: 850px) {
+        .coll {
+          display: none !important;
+        }
       }
     </style>
   </head>
@@ -58,10 +87,11 @@
     <div
       class="row w"
       style="
-        background-color: rgb(45, 221, 113);
+        background-color: rgb(116, 211, 152);
         color: white;
         display: flex;
-        padding: 20px;
+        margin-top: 0;
+        padding: 0px;
         padding-left: 40px;
         padding-right: 40px;
         padding-bottom: 0;
@@ -72,14 +102,32 @@
     >
       <div class="col" style="display: flex; align-items: center">
         <div>
-          <button class="open" type="button">
+          <button
+            class="open"
+            type="button"
+            style="
+              background-color: rgb(30, 233, 149);
+              height: 50px;
+              width: 50px;
+              border: none;
+            "
+          >
             <i class="fa-solid fa-bars" style="font-size: 25px"></i>
           </button>
-          <button class="close hidden" type="button">
+          <button
+            class="close hidden"
+            type="button"
+            style="
+              background-color: rgb(59, 66, 109);
+              height: 50px;
+              width: 50px;
+              border: none;
+            "
+          >
             <i class="fa-solid fa-xmark" style="font-size: 25px"></i>
           </button>
         </div>
-        <h2>
+        <h2 style="padding: 0; margin: 0">
           <i
             class="fa-solid fa-leaf"
             style="color: white; margin-left: 10px"
@@ -89,7 +137,7 @@
       </div>
 
       <div
-        class="col"
+        class="col coll"
         style="
           display: flex;
           align-items: center;
@@ -107,13 +155,13 @@
             class="drop-cont"
             style="
               position: absolute;
-              top: 100%;
+              top: 80%;
               display: none;
               left: 0;
               right: 0;
               margin-left: 10px;
               width: 99vw;
-              transform: translateX(-50%);
+              transform: translateX(-49%);
             "
           >
             <div
@@ -121,36 +169,87 @@
               style="
                 display: flex;
                 justify-content: space-between;
-                background-color: rgb(53, 49, 49);
+                background-color: rgb(37, 37, 37);
               "
             >
-              <div class="col">
-                <h3>Rest with Springboot</h3>
-                <p>
-                  The canonical reference for builing a referernce <br />
-                  api with spring
-                </p>
+              <div class="col" style="display: flex">
+                <img
+                  src="img/leaf.png"
+                  alt=""
+                  style="
+                    height: 50%;
+                    width: 100px;
+                    margin-top: 5%;
+                    margin-right: 10px;
+                  "
+                />
+                <div>
+                  <div>
+                    <h5>Rest with Springboot</h5>
+                    <p>
+                      The canonical reference for builing a referernce <br />
+                      api with spring
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="col">
-                <h3>Learn Spring Security</h3>
-                <p>
-                  The canonical reference for builing a referernce <br />
-                  api with spring
-                </p>
+              <div class="col" style="display: flex">
+                <img
+                  src="img/key.png"
+                  alt=""
+                  style="
+                    height: 50%;
+                    width: 100px;
+                    margin-top: 5%;
+                    margin-right: 10px;
+                  "
+                />
+                <div>
+                  <h5>Learn Spring Security</h5>
+                  <p>
+                    The canonical reference for builing a referernce <br />
+                    api with spring
+                  </p>
+                </div>
               </div>
-              <div class="col">
-                <h3>Learn Spring</h3>
-                <p>
-                  The canonical reference for builing a referernce <br />
-                  api with spring
-                </p>
+              <div class="col" style="display: flex">
+                <img
+                  src="img/leaf1.png"
+                  alt=""
+                  style="
+                    height: 50%;
+                    width: 100px;
+                    margin-top: 5%;
+                    margin-right: 10px;
+                  "
+                />
+                <div>
+                  <h5>Learn Spring</h5>
+                  <p>
+                    The canonical reference for builing a referernce <br />
+                    api with spring
+                  </p>
+                </div>
               </div>
-              <div class="col">
-                <h3>Learn Spring Data</h3>
-                <p>
-                  The canonical reference for builing a referernce <br />
-                  api with spring
-                </p>
+              <div class="col" style="display: flex">
+                <img
+                  src="img/data.png"
+                  alt=""
+                  style="
+                    height: 50%;
+                    width: 100px;
+                    margin-top: 5%;
+                    margin-right: 10px;
+                  "
+                />
+
+                <div>
+                  <h5>Learn Spring Data</h5>
+                  <p>
+                    The canonical reference for builing a referernce <br />
+                    api with spring
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -164,7 +263,7 @@
             class="drop-cont"
             style="
               position: absolute;
-              top: 100%;
+              top: 80%;
               display: none;
               left: 0;
               right: 0;
@@ -178,36 +277,66 @@
               style="
                 display: flex;
                 justify-content: space-between;
-                background-color: rgb(53, 49, 49);
+                background-color: rgb(37, 37, 37);
               "
             >
-              <div class="col">
-                <h3>Rest with Springboot</h3>
-                <p>
-                  The canonical reference for builing a referernce <br />
-                  api with spring
-                </p>
+              <div class="col" style="display: flex">
+                <img
+                  src="img/key.png"
+                  alt=""
+                  style="
+                    height: 50%;
+                    width: 100px;
+                    margin-top: 5%;
+                    margin-right: 10px;
+                  "
+                />
+                <div>
+                  <h5>Learn Spring Security</h5>
+                  <p>
+                    The canonical reference for builing a referernce <br />
+                    api with spring
+                  </p>
+                </div>
               </div>
-              <div class="col">
-                <h3>Learn Spring Security</h3>
-                <p>
-                  The canonical reference for builing a referernce <br />
-                  api with spring
-                </p>
+              <div class="col" style="display: flex">
+                <img
+                  src="img/leaf1.png"
+                  alt=""
+                  style="
+                    height: 50%;
+                    width: 100px;
+                    margin-top: 5%;
+                    margin-right: 10px;
+                  "
+                />
+                <div>
+                  <h5>Learn Spring</h5>
+                  <p>
+                    The canonical reference for builing a referernce <br />
+                    api with spring
+                  </p>
+                </div>
               </div>
-              <div class="col">
-                <h3>Learn Spring</h3>
-                <p>
-                  The canonical reference for builing a referernce <br />
-                  api with spring
-                </p>
-              </div>
-              <div class="col">
-                <h3>Learn Spring Data</h3>
-                <p>
-                  The canonical reference for builing a referernce <br />
-                  api with spring
-                </p>
+              <div class="col" style="display: flex">
+                <img
+                  src="img/data.png"
+                  alt=""
+                  style="
+                    height: 50%;
+                    width: 100px;
+                    margin-top: 5%;
+                    margin-right: 10px;
+                  "
+                />
+
+                <div>
+                  <h5>Learn Spring Data</h5>
+                  <p>
+                    The canonical reference for builing a referernce <br />
+                    api with spring
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -221,13 +350,14 @@
             class="drop-cont"
             style="
               position: absolute;
-              top: 100%;
+              top: 80%;
               display: none;
               left: 0;
               right: 0;
               margin-left: 10px;
+              margin-top: 0;
               width: 99vw;
-              transform: translateX(-64%);
+              transform: translateX(-64.7%);
             "
           >
             <div
@@ -235,36 +365,87 @@
               style="
                 display: flex;
                 justify-content: space-between;
-                background-color: rgb(53, 49, 49);
+                background-color: rgb(37, 37, 37);
               "
             >
-              <div class="col">
-                <h3>Rest with Springboot</h3>
-                <p>
-                  The canonical reference for builing a referernce <br />
-                  api with spring
-                </p>
+              <div class="col" style="display: flex">
+                <img
+                  src="img/leaf.png"
+                  alt=""
+                  style="
+                    height: 50%;
+                    width: 100px;
+                    margin-top: 5%;
+                    margin-right: 10px;
+                  "
+                />
+                <div>
+                  <div>
+                    <h5>Rest with Springboot</h5>
+                    <p>
+                      The canonical reference for builing a referernce <br />
+                      api with spring
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="col">
-                <h3>Learn Spring Security</h3>
-                <p>
-                  The canonical reference for builing a referernce <br />
-                  api with spring
-                </p>
+              <div class="col" style="display: flex">
+                <img
+                  src="img/key.png"
+                  alt=""
+                  style="
+                    height: 50%;
+                    width: 100px;
+                    margin-top: 5%;
+                    margin-right: 10px;
+                  "
+                />
+                <div>
+                  <h5>Learn Spring Security</h5>
+                  <p>
+                    The canonical reference for builing a referernce <br />
+                    api with spring
+                  </p>
+                </div>
               </div>
-              <div class="col">
-                <h3>Learn Spring</h3>
-                <p>
-                  The canonical reference for builing a referernce <br />
-                  api with spring
-                </p>
+              <div class="col" style="display: flex">
+                <img
+                  src="img/leaf1.png"
+                  alt=""
+                  style="
+                    height: 50%;
+                    width: 100px;
+                    margin-top: 5%;
+                    margin-right: 10px;
+                  "
+                />
+                <div>
+                  <h5>Learn Spring</h5>
+                  <p>
+                    The canonical reference for builing a referernce <br />
+                    api with spring
+                  </p>
+                </div>
               </div>
-              <div class="col">
-                <h3>Learn Spring Data</h3>
-                <p>
-                  The canonical reference for builing a referernce <br />
-                  api with spring
-                </p>
+              <div class="col" style="display: flex">
+                <img
+                  src="img/data.png"
+                  alt=""
+                  style="
+                    height: 50%;
+                    width: 100px;
+                    margin-top: 5%;
+                    margin-right: 10px;
+                  "
+                />
+
+                <div>
+                  <h5>Learn Spring Data</h5>
+                  <p>
+                    The canonical reference for builing a referernce <br />
+                    api with spring
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -421,19 +602,22 @@
         </div>
       </div>
     </div>
+
     <script>
       const view = document.querySelector(".view");
       const openBtn = document.querySelector(".open");
       const closeBtn = document.querySelector(".close");
+      const navCol = document.querySelector(".coll");
 
       openBtn.addEventListener("click", () => {
         view.classList.remove("hidden");
         openBtn.classList.add("hidden");
+        navCol.classList.add("hidden");
         closeBtn.classList.remove("hidden");
       });
       closeBtn.addEventListener("click", () => {
         view.classList.add("hidden");
-
+        navCol.classList.remove("hidden");
         openBtn.classList.remove("hidden");
         closeBtn.classList.add("hidden");
       });
