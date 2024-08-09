@@ -70,6 +70,13 @@
         display: flex;
         align-items: center;
       }
+      .btn:hover {
+        background-color: rgb(116, 211, 152) !important;
+      }
+      li:hover {
+        cursor: pointer;
+        color: rgb(140, 148, 202);
+      }
       h5 {
         font-size: 18px;
       }
@@ -79,6 +86,25 @@
       @media screen and (max-width: 850px) {
         .coll {
           display: none !important;
+        }
+        @media screen and (max-width: 1000px) {
+          .info {
+            display: block !important;
+          }
+          .one,
+          .two {
+            width: 100% !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .sea {
+            width: 50% !important;
+            margin: auto;
+          }
+          form {
+            width: 100%;
+          }
         }
       }
     </style>
@@ -155,13 +181,13 @@
             class="drop-cont"
             style="
               position: absolute;
-              top: 80%;
+              top: 102%;
               display: none;
               left: 0;
               right: 0;
               margin-left: 10px;
-              width: 99vw;
-              transform: translateX(-49%);
+              width: 98.95vw;
+              transform: translateX(-49.3%);
             "
           >
             <div
@@ -263,13 +289,13 @@
             class="drop-cont"
             style="
               position: absolute;
-              top: 80%;
+              top: 102%;
               display: none;
               left: 0;
               right: 0;
               margin-left: 10px;
-              width: 99vw;
-              transform: translateX(-57%);
+              width: 98.95vw;
+              transform: translateX(-57.66%);
             "
           >
             <div
@@ -350,14 +376,14 @@
             class="drop-cont"
             style="
               position: absolute;
-              top: 80%;
+              top: 102%;
               display: none;
               left: 0;
               right: 0;
               margin-left: 10px;
               margin-top: 0;
-              width: 99vw;
-              transform: translateX(-64.7%);
+              width: 98.96vw;
+              transform: translateX(-64.9%);
             "
           >
             <div
@@ -460,143 +486,349 @@
     </div>
     <div
       class="view hidden"
-      style="background-color: rgb(59, 66, 109); padding: 20px"
+      style="background-color: rgba(69, 76, 121, 0.8); padding: 20px"
     >
       <form
         class="d-flex mt-3"
-        style="width: 30%; margin: auto; margin-top: 10px"
+        style="width: 40%; margin: auto; margin-top: 10px"
       >
         <input
-          class="form-control me-2"
+          class="form-control me-2 sea"
           type="search"
-          placeholder="Search"
+          placeholder=""
           aria-label="Search"
-          style="height: 35px; width: 280px"
+          style="
+            height: 35px;
+            width: 280px;
+            background-image: url(img/search.svg);
+            background-repeat: no-repeat;
+            background-position: 8px center;
+            background-size: 16px 16px;
+            font-size: 16px;
+            padding-left: 30px;
+          "
         />
         <button
           class="btn btn-outline-success"
           type="submit"
-          style="height: 35px; padding: 10px"
+          style="
+            height: 35px;
+            padding: 10px;
+            background-color: rgb(140, 148, 202);
+            color: white;
+            border: none;
+          "
         >
-          go
+          GO
         </button>
       </form>
-      <div style="display: flex">
-        <div class="row tan">
-          <div class="col-sm-12 col-md-6 col-lg-3 col">
-            <h4>Tandem</h4>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Corrupti, iure exercitationem amet tempora soluta minus
-              perspiciatis.
-            </p>
-            <div style="display: flex">
-              <a href=""
-                ><i
-                  class="fa-brands fa-whatsapp"
-                  style="color: rgb(243, 252, 243); font-size: 30px"
-                ></i
-              ></a>
-              <a href=""
-                ><i
-                  class="fa-brands fa-facebook ms-2"
-                  style="color: rgb(241, 241, 255); font-size: 30px"
-                ></i
-              ></a>
-              <a href=""
-                ><i
-                  class="fa-brands fa-twitter ms-2"
-                  style="color: rgb(236, 236, 243); font-size: 30px"
-                ></i
-              ></a>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 col">
-            <h4>Quick links</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="./codes/aboutus.html">About Us</a></li>
-              <li><a href="./codes/services.html">Services</a></li>
-              <li>
-                <a href="./codes/contactus.html">Contact us</a>
+      <div
+        class="info"
+        style="padding: 60px; display: flex; justify-content: space-between"
+      >
+        <div class="one" style="width: 49%">
+          <h3
+            style="
+              display: flex;
+              align-items: center;
+              color: white;
+              font-size: 30px;
+            "
+          >
+            <img
+              src="img/leaf.png"
+              alt=""
+              style="
+                height: 40px;
+                width: 40px;
+                /* margin-top: 5%; */
+                /* margin-right: 10px; */
+              "
+            />
+            Spring Tutorials and Guides
+          </h3>
+          <hr style="border: 0.5px solid rgb(92, 247, 92)" />
+          <div style="display: flex; color: white">
+            <ul
+              style="
+                font-size: 18px;
+                width: 45%;
+                list-style-type: none;
+                line-height: 50px;
+              "
+            >
+              <li style="line-height: normal">
+                Spring Framework <br />
+                <strong>Introduction</strong>
+              </li>
+              <li>Spring <strong>Boot</strong> Tutorials</li>
+              <li>Spring <strong>Rest</strong> Tutorials</li>
+              <li>Spring <strong>Data</strong> Tutorials</li>
+              <li>Spring <strong>Security</strong> Tutorials</li>
+              <li><strong> </strong></li>
+              <li style="line-height: normal">
+                Spring Security <strong>Registration</strong> Tutorials
+              </li>
+              <br />
+              <li style="line-height: normal">
+                Spring <strong>Reactive</strong> Tutorials
               </li>
             </ul>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 col">
-            <h4>Services</h4>
-            <ul>
-              <li><a href="">Truck and Haulage</a></li>
-              <li><a href="">Relocation and Logistics</a></li>
-              <li><a href="">Car rental</a></li>
-              <li><a href="">Courier Services</a></li>
-            </ul>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 col">
-            <h4>Contact Us</h4>
-            <ul>
-              <li><a href="">Relocatio and Logistics</a></li>
-              <li><a href="">+1-23-456-798</a></li>
-              <li><a href="">Car rental</a></li>
-              <li><a href="">Courier Services</a></li>
+            <ul
+              style="
+                font-size: 18px;
+                width: 55%;
+                list-style-type: none;
+                line-height: 50px;
+              "
+            >
+              <li style="line-height: normal">
+                Spring <strong>Dependency Injection</strong> Tutorials
+              </li>
+              <li>Spring <strong>MVC</strong> Tutorials</li>
+              <li>Spring <strong>Persistence</strong> Tutorials</li>
+              <li>Spring <strong>5</strong> Tutorials</li>
+              <li>Spring Security <strong>OAUTH</strong> Tutorials</li>
+              <li>Spring <strong>Cloud</strong> Tutorials</li>
             </ul>
           </div>
         </div>
-        <div class="row tan">
-          <div class="col-sm-12 col-md-6 col-lg-3 col">
-            <h4>Tandem</h4>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Corrupti, iure exercitationem amet tempora soluta minus
-              perspiciatis.
-            </p>
-            <div style="display: flex">
-              <a href=""
-                ><i
-                  class="fa-brands fa-whatsapp"
-                  style="color: rgb(243, 252, 243); font-size: 30px"
-                ></i
-              ></a>
-              <a href=""
-                ><i
-                  class="fa-brands fa-facebook ms-2"
-                  style="color: rgb(241, 241, 255); font-size: 30px"
-                ></i
-              ></a>
-              <a href=""
-                ><i
-                  class="fa-brands fa-twitter ms-2"
-                  style="color: rgb(236, 236, 243); font-size: 30px"
-                ></i
-              ></a>
-            </div>
+        <div class="two" style="width: 44%; color: white">
+          <h3
+            style="
+              display: flex;
+              align-items: center;
+              color: white;
+              font-size: 30px;
+            "
+          >
+            <img
+              src="img/leaf.png"
+              alt=""
+              style="
+                height: 40px;
+                width: 40px;
+                /* margin-top: 5%; */
+                /* margin-right: 10px; */
+              "
+            />
+            Courses
+          </h3>
+          <hr style="border: 0.5px solid rgb(92, 247, 92); width: 95%" />
+          <div>
+            <ul
+              style="
+                display: flex;
+                list-style-type: none;
+                justify-content: space-between;
+                font-size: 18px;
+                padding: 0;
+              "
+            >
+              <li>All Courses</li>
+              <li>Bulk Courses</li>
+            </ul>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 col">
-            <h4>Quick links</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="./codes/aboutus.html">About Us</a></li>
-              <li><a href="./codes/services.html">Services</a></li>
+          <h3
+            style="
+              display: flex;
+              align-items: center;
+              color: white;
+              font-size: 20px;
+            "
+          >
+            <img
+              src="img/leaf.png"
+              alt=""
+              style="
+                height: 40px;
+                width: 40px;
+                /* margin-top: 5%; */
+                /* margin-right: 10px; */
+              "
+            />
+            Announcement
+          </h3>
+          <hr style="border: 0.5px solid rgb(92, 247, 92); width: 95%" />
+          <div>
+            <p style="font-size: 18px">
+              We have opened a new
+              <strong>Java Course Team lead with Spring.</strong> Part-time and
+              entirely remote of course. <br /><br />
+              We are looking for Java authors for the site
+            </p>
+          </div>
+        </div>
+      </div>
+      <div style="padding-left: 60px">
+        <div class="one" style="width: 49%">
+          <h3
+            style="
+              display: flex;
+              align-items: center;
+              color: white;
+              font-size: 30px;
+            "
+          >
+            <img
+              src="img/leaf1.jpg"
+              alt=""
+              style="
+                height: 40px;
+                width: 40px;
+                /* margin-top: 5%; */
+                /* margin-right: 10px; */
+              "
+            />
+            Java Tutorials and Guides
+          </h3>
+          <hr style="border: 0.5px solid rgb(92, 247, 92)" />
+          <div style="display: flex; color: white; align-items: center">
+            <ul
+              style="
+                font-size: 18px;
+                width: 55%;
+                list-style-type: none;
+                line-height: 50px;
+              "
+            >
+              <li><strong>Get started with Java</strong> Tutorials</li>
+              <li><strong>Java Stream</strong> Tutorials</li>
+            </ul>
+            <ul
+              style="
+                font-size: 18px;
+                width: 45%;
+                list-style-type: none;
+                line-height: 50px;
+              "
+            >
+              <li><strong>Java</strong> Tutorials</li>
+              <li><strong>Java Collections</strong> Tutorials</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="padding-left: 60px">
+        <div class="one" style="width: 49%">
+          <h3
+            style="
+              display: flex;
+              align-items: center;
+              color: white;
+              font-size: 30px;
+            "
+          >
+            <img src="img/data.png" alt="" style="height: 40px; width: 40px" />
+            Other Tutorials and Guides
+          </h3>
+          <hr style="border: 0.5px solid rgb(92, 247, 92)" />
+          <div style="display: flex; color: white; align-items: center">
+            <ul
+              style="
+                font-size: 18px;
+                width: 55%;
+                list-style-type: none;
+                line-height: 50px;
+              "
+            >
+              <li><strong>Junit</strong> Tutorials</li>
+              <li><strong>Jackson</strong> Tutorials</li>
+            </ul>
+            <ul
+              style="
+                font-size: 18px;
+                width: 45%;
+                list-style-type: none;
+                line-height: 50px;
+              "
+            >
+              <li><strong>Mockito</strong> Tutorials</li>
+              <li><strong>Maven</strong> Tutorials</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="padding-left: 60px">
+        <div class="one" style="width: 49%">
+          <h3
+            style="
+              display: flex;
+              align-items: center;
+              color: white;
+              font-size: 30px;
+            "
+          >
+            <img src="img/data.png" alt="" style="height: 40px; width: 40px" />
+            Baeldung Sites
+          </h3>
+          <hr style="border: 0.5px solid rgb(92, 247, 92)" />
+          <div style="display: flex; color: white; align-items: center">
+            <ul
+              style="
+                font-size: 18px;
+                width: 55%;
+                list-style-type: none;
+                line-height: 50px;
+              "
+            >
               <li>
-                <a href="./codes/contactus.html">Contact us</a>
+                <img
+                  src="img/linux.jpg"
+                  alt=""
+                  style="
+                    height: 20px;
+                    width: 20px;
+                    /* margin-top: 5%; */
+                    /* margin-right: 10px; */
+                  "
+                /><strong>LINUX</strong>
+              </li>
+              <li>
+                <img
+                  src="img/comp.jpg"
+                  alt=""
+                  style="
+                    height: 20px;
+                    width: 20px;
+                    /* margin-top: 5%; */
+                    /* margin-right: 10px; */
+                  "
+                /><strong>Computer Science</strong>
               </li>
             </ul>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 col">
-            <h4>Services</h4>
-            <ul>
-              <li><a href="">Truck and Haulage</a></li>
-              <li><a href="">Relocation and Logistics</a></li>
-              <li><a href="">Car rental</a></li>
-              <li><a href="">Courier Services</a></li>
-            </ul>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 col">
-            <h4>Contact Us</h4>
-            <ul>
-              <li><a href="">Relocatio and Logistics</a></li>
-              <li><a href="">+1-23-456-798</a></li>
-              <li><a href="">Car rental</a></li>
-              <li><a href="">Courier Services</a></li>
+            <ul
+              style="
+                font-size: 18px;
+                width: 45%;
+                list-style-type: none;
+                line-height: 50px;
+              "
+            >
+              <li>
+                <img
+                  src="img/scala.jpg"
+                  alt=""
+                  style="
+                    height: 20px;
+                    width: 20px;
+                    /* margin-top: 5%; */
+                    /* margin-right: 10px; */
+                  "
+                /><strong>Scala</strong>
+              </li>
+              <li>
+                <img
+                  src="img/kotlin.avif"
+                  alt=""
+                  style="
+                    height: 20px;
+                    width: 20px;
+                    /* margin-top: 5%; */
+                    /* margin-right: 10px; */
+                  "
+                /><strong>Kotlin</strong>
+              </li>
             </ul>
           </div>
         </div>
